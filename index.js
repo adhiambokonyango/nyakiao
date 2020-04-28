@@ -77,6 +77,13 @@ app.use(require("./routes/great_grand_parents/GGGGGrParentsRoutes.js"));
 app.use(require("./routes/great_grand_parents/GGGGrParentsRoutes.js"));
 app.use(require("./routes/great_grand_parents/GGGrParentsRoutes.js"));
 app.use(require("./routes/great_grand_parents/GGrParentsRoutes.js"));
+app.use(require("./routes/great_grand_parents/GrParentsRoutes.js"));
+
+app.use(require("./routes/great_grand_parents_siblings/GGGGGrParentsSiblingsRoutes.js"));
+app.use(require("./routes/great_grand_parents_siblings/GGGGrParentsSiblingsRoutes.js"));
+app.use(require("./routes/great_grand_parents_siblings/GGGrParentsSiblingsRoutes.js"));
+app.use(require("./routes/great_grand_parents_siblings/GGrParentsSiblingsRoutes.js"));
+app.use(require("./routes/great_grand_parents_siblings/GrParentsSiblingsRoutes.js"));
 
 
 /*SON/2019-1-04 11:50 - DEVELOPMENT : End Common Utilities*/
