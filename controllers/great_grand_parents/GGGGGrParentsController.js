@@ -6,7 +6,7 @@ passes the calls down to the "GGGGGrParentsModel" class
 
 
 
-const GGGGGrParentsModel = require('../../models/gggggr_parents/GGGGGrParentsModel.js');
+const GGGGGrParentsModel = require('../../models/great_grand_parents/GGGGGrParentsModel.js');
 
 
 

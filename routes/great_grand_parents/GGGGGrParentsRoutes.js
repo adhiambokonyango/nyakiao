@@ -11,7 +11,7 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
-const GGGGGrParentsController = require('../../controllers/gggggr_parents/GGGGGrParentsController.js');
+const GGGGGrParentsController = require('../../controllers/great_grand_parents/GGGGGrParentsController.js');
 
 
 
