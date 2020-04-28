@@ -23,7 +23,7 @@ router.use(function timeLog(req, res, next) {
 
 
 
-router.post('/add_GGGrParents', urlencodedParser,function(request,response){
+router.post('/add_gggr_parents', urlencodedParser,function(request,response){
 
 
 
@@ -59,7 +59,7 @@ router.post('/add_GGGrParents', urlencodedParser,function(request,response){
 
 
 
-router.post('/get_all_GGGrParents',urlencodedParser,function(request,response){
+router.post('/get_all_gggr_parents',urlencodedParser,function(request,response){
 
     var myPromise = GGGrParentsController.get_all_records();
 
@@ -83,7 +83,7 @@ router.post('/get_all_GGGrParents',urlencodedParser,function(request,response){
 
 
 
-router.post('/get_specific_GGGrParents',urlencodedParser,function(request,response){
+router.post('/get_specific_gggr_parents',urlencodedParser,function(request,response){
     var mKey=request.body.column_name;
     //var mValue=parseInt(request.query.search_value, 10);
     var mValue=request.body.search_value;
@@ -117,7 +117,7 @@ router.post('/get_specific_GGGrParents',urlencodedParser,function(request,respon
 
 
 
-router.post('/update_GGGrParents',urlencodedParser,function(request,response){
+router.post('/update_gggr_parents',urlencodedParser,function(request,response){
 
 
     var	jsonObject_ = {
@@ -155,7 +155,7 @@ router.post('/update_GGGrParents',urlencodedParser,function(request,response){
 
 
 
-router.post('/update_individual_GGGrParents',urlencodedParser,function(request,response){
+router.post('/update_individual_gggr_parents',urlencodedParser,function(request,response){
 
     var column_name=request.body.ColumnName;
     var value_=request.body.ColumnValue;
@@ -193,7 +193,7 @@ router.post('/update_individual_GGGrParents',urlencodedParser,function(request,r
 
 
 
-router.post('/delete_individual_GGGrParents',urlencodedParser,function(request,response){
+router.post('/delete_individual_gggr_parents',urlencodedParser,function(request,response){
 
     var column_name=request.body.column_name;
     //var mValue=parseInt(request.body.search_value, 10);
@@ -223,7 +223,7 @@ router.post('/delete_individual_GGGrParents',urlencodedParser,function(request,r
 
 
 
-router.post('/get_number_of_GGGrParents_records',urlencodedParser,function(request,response){
+router.post('/get_number_of_gggr_parents_records',urlencodedParser,function(request,response){
 
     var column_name=request.body.column_name;
     //var mValue=parseInt(request.body.search_value, 10);
@@ -251,7 +251,7 @@ router.post('/get_number_of_GGGrParents_records',urlencodedParser,function(reque
 
 
 
-router.post('/GGGrParents_user_specific_query',urlencodedParser,function(request,response){
+router.post('/gggr_parents_user_specific_query',urlencodedParser,function(request,response){
 
     var ColumnName=request.body.ColumnName;
     //var mValue=parseInt(request.body.search_value, 10);

@@ -1,8 +1,8 @@
 /*SON/2018-11-06 00:29 - DEVELOPMENT
-This class is the GGGGrParents table's route class.
+This class is the GGrParents table's route class.
 It is initialized at the "Index.js" and is able to recieve
 calls from the client and passes the calls down to the
-"GGGGrParentsController" class
+"GGrParentsController" class
 */
 
 
@@ -11,7 +11,7 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
-const GGGGrParentsController = require('../../controllers/great_grand_parents/GGGGrParentsController.js');
+const GGrParentsController = require('../../controllers/great_grand_parents/GGrParentsController.js');
 
 
 
@@ -23,7 +23,7 @@ router.use(function timeLog(req, res, next) {
 
 
 
-router.post('/add_ggggr_parents', urlencodedParser,function(request,response){
+router.post('/add_ggr_parents', urlencodedParser,function(request,response){
 
 
 
@@ -40,7 +40,7 @@ router.post('/add_ggggr_parents', urlencodedParser,function(request,response){
     };
 
 
-    var myPromise = GGGGrParentsController.insert(jsonObject_);
+    var myPromise = GGrParentsController.insert(jsonObject_);
 
 
     myPromise.then(function(result) {
@@ -59,9 +59,9 @@ router.post('/add_ggggr_parents', urlencodedParser,function(request,response){
 
 
 
-router.post('/get_all_ggggr_parents',urlencodedParser,function(request,response){
+router.post('/get_all_ggr_parents',urlencodedParser,function(request,response){
 
-    var myPromise = GGGGrParentsController.get_all_records();
+    var myPromise = GGrParentsController.get_all_records();
 
 
     myPromise.then(function(result) {
@@ -83,7 +83,7 @@ router.post('/get_all_ggggr_parents',urlencodedParser,function(request,response)
 
 
 
-router.post('/get_specific_ggggr_parents',urlencodedParser,function(request,response){
+router.post('/get_specific_ggr_parents',urlencodedParser,function(request,response){
     var mKey=request.body.column_name;
     //var mValue=parseInt(request.query.search_value, 10);
     var mValue=request.body.search_value;
@@ -91,7 +91,7 @@ router.post('/get_specific_ggggr_parents',urlencodedParser,function(request,resp
 
 
 
-    var myPromise = GGGGrParentsController.get_specific_records(mKey,mValue);
+    var myPromise = GGrParentsController.get_specific_records(mKey,mValue);
 
 
     myPromise.then(function(result) {
@@ -117,7 +117,7 @@ router.post('/get_specific_ggggr_parents',urlencodedParser,function(request,resp
 
 
 
-router.post('/update_ggggr_parents',urlencodedParser,function(request,response){
+router.post('/update_ggr_parents',urlencodedParser,function(request,response){
 
 
     var	jsonObject_ = {
@@ -134,7 +134,7 @@ router.post('/update_ggggr_parents',urlencodedParser,function(request,response){
 
 
 
-    var myPromise = GGGGrParentsController.batch_update(jsonObject_);
+    var myPromise = GGrParentsController.batch_update(jsonObject_);
 
 
     myPromise.then(function(result) {
@@ -155,7 +155,7 @@ router.post('/update_ggggr_parents',urlencodedParser,function(request,response){
 
 
 
-router.post('/update_individual_ggggr_parents',urlencodedParser,function(request,response){
+router.post('/update_individual_ggr_parents',urlencodedParser,function(request,response){
 
     var column_name=request.body.ColumnName;
     var value_=request.body.ColumnValue;
@@ -174,7 +174,7 @@ router.post('/update_individual_ggggr_parents',urlencodedParser,function(request
     };
 
 
-    var myPromise = GGGGrParentsController.individual_record_update(column_name,value_,jsonObject_);
+    var myPromise = GGrParentsController.individual_record_update(column_name,value_,jsonObject_);
 
 
     myPromise.then(function(result) {
@@ -193,7 +193,7 @@ router.post('/update_individual_ggggr_parents',urlencodedParser,function(request
 
 
 
-router.post('/delete_individual_ggggr_parents',urlencodedParser,function(request,response){
+router.post('/delete_individual_ggr_parents',urlencodedParser,function(request,response){
 
     var column_name=request.body.column_name;
     //var mValue=parseInt(request.body.search_value, 10);
@@ -204,7 +204,7 @@ router.post('/delete_individual_ggggr_parents',urlencodedParser,function(request
     var UserId=request.body.UserId;
 
 
-    var myPromise = GGGGrParentsController.delete_user_specic_record(column_name,value_,UserIdColumnName,UserId);
+    var myPromise = GGrParentsController.delete_user_specic_record(column_name,value_,UserIdColumnName,UserId);
 
 
     myPromise.then(function(result) {
@@ -223,7 +223,7 @@ router.post('/delete_individual_ggggr_parents',urlencodedParser,function(request
 
 
 
-router.post('/get_number_of_ggggr_parents_records',urlencodedParser,function(request,response){
+router.post('/get_number_of_ggr_parents_records',urlencodedParser,function(request,response){
 
     var column_name=request.body.column_name;
     //var mValue=parseInt(request.body.search_value, 10);
@@ -231,7 +231,7 @@ router.post('/get_number_of_ggggr_parents_records',urlencodedParser,function(req
 
 
 
-    var myPromise = GGGGrParentsController.get_number_of_records(column_name,value_);
+    var myPromise = GGrParentsController.get_number_of_records(column_name,value_);
 
 
     myPromise.then(function(result) {
@@ -251,7 +251,7 @@ router.post('/get_number_of_ggggr_parents_records',urlencodedParser,function(req
 
 
 
-router.post('/ggggr_parents_user_specific_query',urlencodedParser,function(request,response){
+router.post('/ggr_parents_user_specific_query',urlencodedParser,function(request,response){
 
     var ColumnName=request.body.ColumnName;
     //var mValue=parseInt(request.body.search_value, 10);
@@ -263,7 +263,7 @@ router.post('/ggggr_parents_user_specific_query',urlencodedParser,function(reque
 
 
 
-    var myPromise = GGGGrParentsController.user_specific_select_query(ColumnName,value_,UserIdColumnName,UserId);
+    var myPromise = GGrParentsController.user_specific_select_query(ColumnName,value_,UserIdColumnName,UserId);
 
 
     myPromise.then(function(result) {

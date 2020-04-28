@@ -76,6 +76,7 @@ app.post("/upload_images", upload.single("file"), function(req, res) {
 app.use(require("./routes/great_grand_parents/GGGGGrParentsRoutes.js"));
 app.use(require("./routes/great_grand_parents/GGGGrParentsRoutes.js"));
 app.use(require("./routes/great_grand_parents/GGGrParentsRoutes.js"));
+app.use(require("./routes/great_grand_parents/GGrParentsRoutes.js"));
 
 
 /*SON/2019-1-04 11:50 - DEVELOPMENT : End Common Utilities*/
