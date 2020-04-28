@@ -22,7 +22,7 @@ dbcredentials = {
   host: "localhost",
   user: "mary",
   password: "31547207",
-  database: "taskSchedular",
+  database: "reunion",
   insecureAuth: true
 };
 
@@ -73,11 +73,8 @@ app.post("/upload_images", upload.single("file"), function(req, res) {
 
 
 
-app.use(require("./routes/menu/ProjectsRoutes.js"));
-app.use(require("./routes/menu/TeamMembersRoutes.js"));
-app.use(require("./routes/menu/TeamRoutes.js"));
-app.use(require("./routes/menu/CompanyRoutes.js"));
-app.use(require("./routes/system_admin/SystemAdminRoutes"));
+app.use(require("./routes/gggggr_parents/GGGGGrParentsRoutes.js"));
+
 
 /*SON/2019-1-04 11:50 - DEVELOPMENT : End Common Utilities*/
 

@@ -4,7 +4,7 @@ const con = mysql.createPool({
   host: "localhost",
   user: "mary",
   password: "31547207",
-  database: "taskSchedular",
+  database: "reunion",
   insecureAuth: true
 });
 setInterval(() => {
