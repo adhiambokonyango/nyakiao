@@ -112,6 +112,10 @@ app.use(require("./routes/great_grand_children_cousins/GGGrChildrenCousinsRoutes
 app.use(require("./routes/great_grand_children_cousins/GGrChildrenCousinsRoutes.js"));
 app.use(require("./routes/great_grand_children_cousins/GrChildrenCousinsRoutes.js"));
 
+// children
+app.use(require("./routes/children/ChildrenRoutes.js"));
+app.use(require("./routes/children/ChildrenCousinsRoutes.js"));
+
 
 /*SON/2019-1-04 11:50 - DEVELOPMENT : End Common Utilities*/
 
