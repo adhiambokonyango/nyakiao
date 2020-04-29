@@ -147,6 +147,10 @@ app.use(require("./routes/funding/DeductionTypeRoutes.js"));
 app.use(require("./routes/funding/MonthsRoutes.js"));
 app.use(require("./routes/funding/MonthsIterationsRoutes.js"));
 app.use(require("./routes/funding/OrganizationalOverallAmountRoutes.js"));
+app.use(require("./routes/funding/QuarterIterationRoutes.js"));
+app.use(require("./routes/funding/UserContributionsRoutes.js"));
+app.use(require("./routes/funding/UserContributionReportRoutes.js"));
+app.use(require("./routes/funding/YearsRoutes.js"));
 
 /*SON/2019-1-04 11:50 - DEVELOPMENT : End Common Utilities*/
 
