@@ -72,28 +72,38 @@ app.post("/upload_images", upload.single("file"), function(req, res) {
 /*SON/2019-1-04 11:50 - DEVELOPMENT : Start Common Utilities*/
 
 
-
+// great_grand_parents
 app.use(require("./routes/great_grand_parents/GGGGGrParentsRoutes.js"));
 app.use(require("./routes/great_grand_parents/GGGGrParentsRoutes.js"));
 app.use(require("./routes/great_grand_parents/GGGrParentsRoutes.js"));
 app.use(require("./routes/great_grand_parents/GGrParentsRoutes.js"));
 app.use(require("./routes/great_grand_parents/GrParentsRoutes.js"));
 
+// great_grand_parents_siblings
 app.use(require("./routes/great_grand_parents_siblings/GGGGGrParentsSiblingsRoutes.js"));
 app.use(require("./routes/great_grand_parents_siblings/GGGGrParentsSiblingsRoutes.js"));
 app.use(require("./routes/great_grand_parents_siblings/GGGrParentsSiblingsRoutes.js"));
 app.use(require("./routes/great_grand_parents_siblings/GGrParentsSiblingsRoutes.js"));
 app.use(require("./routes/great_grand_parents_siblings/GrParentsSiblingsRoutes.js"));
 
+// great_grand_parents_cousins
 app.use(require("./routes/great_grand_parents_cousins/GGGGGrParentsCousinsRoutes.js"));
 app.use(require("./routes/great_grand_parents_cousins/GGGGrParentsCousinsRoutes.js"));
 app.use(require("./routes/great_grand_parents_cousins/GGGrParentsCousinsRoutes.js"));
 app.use(require("./routes/great_grand_parents_cousins/GGrParentsCousinsRoutes.js"));
 app.use(require("./routes/great_grand_parents_cousins/GrParentsCousinsRoutes.js"));
 
+// parents
 app.use(require("./routes/parents/ParentsRoutes.js"));
 app.use(require("./routes/parents/ParentsSiblingsRoutes.js"));
 app.use(require("./routes/parents/ParentsCousinsRoutes.js"));
+
+// great_grand_children
+app.use(require("./routes/great_grand_children/GGGGGrChildrenRoutes.js"));
+app.use(require("./routes/great_grand_children/GGGGrChildrenRoutes.js"));
+app.use(require("./routes/great_grand_children/GGGrChildrenRoutes.js"));
+app.use(require("./routes/great_grand_children/GGrChildrenRoutes.js"));
+app.use(require("./routes/great_grand_children/GrChildrenRoutes.js"));
 
 
 /*SON/2019-1-04 11:50 - DEVELOPMENT : End Common Utilities*/
