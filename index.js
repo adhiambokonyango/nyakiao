@@ -131,6 +131,9 @@ app.use(require("./routes/gender/GenderRoutes.js"));
 // address
 app.use(require("./routes/address/AddressRoutes.js"));
 
+// cousins
+app.use(require("./routes/cousins/CousinsRoutes.js"));
+
 /*SON/2019-1-04 11:50 - DEVELOPMENT : End Common Utilities*/
 
 
