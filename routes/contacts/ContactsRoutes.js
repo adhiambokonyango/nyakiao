@@ -32,8 +32,9 @@ router.post('/add_contacts', urlencodedParser,function(request,response){
 
 
         UserId:request.body.UserId,
-        RelativeId:request.body.RelativeId,
-        GenderId:request.body.GenderId
+        PhoneNumber:request.body.PhoneNumber,
+        Email:request.body.Email,
+        AlternativePhoneNumber:request.body.AlternativePhoneNumber
 
 
 
@@ -125,8 +126,9 @@ router.post('/update_contacts',urlencodedParser,function(request,response){
 
 
         UserId:request.body.UserId,
-        RelativeId:request.body.RelativeId,
-        GenderId:request.body.GenderId
+        PhoneNumber:request.body.PhoneNumber,
+        Email:request.body.Email,
+        AlternativePhoneNumber:request.body.AlternativePhoneNumber
 
 
 
@@ -166,8 +168,9 @@ router.post('/update_individual_contacts',urlencodedParser,function(request,resp
 
 
         UserId:request.body.UserId,
-        RelativeId:request.body.RelativeId,
-        GenderId:request.body.GenderId
+        PhoneNumber:request.body.PhoneNumber,
+        Email:request.body.Email,
+        AlternativePhoneNumber:request.body.AlternativePhoneNumber
 
 
 

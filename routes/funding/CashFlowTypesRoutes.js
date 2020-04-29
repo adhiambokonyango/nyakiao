@@ -1,8 +1,8 @@
 /*SON/2018-11-06 00:29 - DEVELOPMENT
-This class is the GGGgrAddress table's route class.
+This class is the GGGgrCashFlowTypes table's route class.
 It is initialized at the "Index.js" and is able to recieve
 calls from the client and passes the calls down to the
-"AddressController" class
+"CashFlowTypesController" class
 */
 
 
@@ -11,7 +11,7 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
-const AddressController = require('../../controllers/address/AddressController.js');
+const CashFlowTypesController = require('../../controllers/funding/CashFlowTypesController.js');
 
 
 
@@ -23,7 +23,7 @@ router.use(function timeLog(req, res, next) {
 
 
 
-router.post('/add_address', urlencodedParser,function(request,response){
+router.post('/add_cash_flow_types', urlencodedParser,function(request,response){
 
 
 
@@ -31,17 +31,16 @@ router.post('/add_address', urlencodedParser,function(request,response){
 
 
 
-        UserId:request.body.UserId,
-        CountyId:request.body.CountyId,
-        SubCountyId:request.body.SubCountyId,
-        EstateDescription:request.body.EstateDescription
+        CashFLowTypeDescription:request.body.CashFLowTypeDescription,
+        CashFLowCode:request.body.CashFLowCode,
+        FlowFlag:request.body.FlowFlag
 
 
 
     };
 
 
-    var myPromise = AddressController.insert(jsonObject_);
+    var myPromise = CashFlowTypesController.insert(jsonObject_);
 
 
     myPromise.then(function(result) {
@@ -60,9 +59,9 @@ router.post('/add_address', urlencodedParser,function(request,response){
 
 
 
-router.post('/get_all_address',urlencodedParser,function(request,response){
+router.post('/get_all_cash_flow_types',urlencodedParser,function(request,response){
 
-    var myPromise = AddressController.get_all_records();
+    var myPromise = CashFlowTypesController.get_all_records();
 
 
     myPromise.then(function(result) {
@@ -84,7 +83,7 @@ router.post('/get_all_address',urlencodedParser,function(request,response){
 
 
 
-router.post('/get_specific_address',urlencodedParser,function(request,response){
+router.post('/get_specific_cash_flow_types',urlencodedParser,function(request,response){
     var mKey=request.body.column_name;
     //var mValue=parseInt(request.query.search_value, 10);
     var mValue=request.body.search_value;
@@ -92,7 +91,7 @@ router.post('/get_specific_address',urlencodedParser,function(request,response){
 
 
 
-    var myPromise = AddressController.get_specific_records(mKey,mValue);
+    var myPromise = CashFlowTypesController.get_specific_records(mKey,mValue);
 
 
     myPromise.then(function(result) {
@@ -118,17 +117,16 @@ router.post('/get_specific_address',urlencodedParser,function(request,response){
 
 
 
-router.post('/update_address',urlencodedParser,function(request,response){
+router.post('/update_cash_flow_types',urlencodedParser,function(request,response){
 
 
     var	jsonObject_ = {
 
 
 
-        UserId:request.body.UserId,
-        CountyId:request.body.CountyId,
-        SubCountyId:request.body.SubCountyId,
-        EstateDescription:request.body.EstateDescription
+        CashFLowTypeDescription:request.body.CashFLowTypeDescription,
+        CashFLowCode:request.body.CashFLowCode,
+        FlowFlag:request.body.FlowFlag
 
 
 
@@ -136,7 +134,7 @@ router.post('/update_address',urlencodedParser,function(request,response){
 
 
 
-    var myPromise = AddressController.batch_update(jsonObject_);
+    var myPromise = CashFlowTypesController.batch_update(jsonObject_);
 
 
     myPromise.then(function(result) {
@@ -157,7 +155,7 @@ router.post('/update_address',urlencodedParser,function(request,response){
 
 
 
-router.post('/update_individual_address',urlencodedParser,function(request,response){
+router.post('/update_individual_cash_flow_types',urlencodedParser,function(request,response){
 
     var column_name=request.body.ColumnName;
     var value_=request.body.ColumnValue;
@@ -167,16 +165,16 @@ router.post('/update_individual_address',urlencodedParser,function(request,respo
 
 
 
-        UserId:request.body.UserId,
-        CountyId:request.body.CountyId,
-        SubCountyId:request.body.SubCountyId,
-        EstateDescription:request.body.EstateDescription
+        CashFLowTypeDescription:request.body.CashFLowTypeDescription,
+        CashFLowCode:request.body.CashFLowCode,
+        FlowFlag:request.body.FlowFlag
+
 
 
     };
 
 
-    var myPromise = AddressController.individual_record_update(column_name,value_,jsonObject_);
+    var myPromise = CashFlowTypesController.individual_record_update(column_name,value_,jsonObject_);
 
 
     myPromise.then(function(result) {
@@ -195,7 +193,7 @@ router.post('/update_individual_address',urlencodedParser,function(request,respo
 
 
 
-router.post('/delete_individual_address',urlencodedParser,function(request,response){
+router.post('/delete_individual_cash_flow_types',urlencodedParser,function(request,response){
 
     var column_name=request.body.column_name;
     //var mValue=parseInt(request.body.search_value, 10);
@@ -206,7 +204,7 @@ router.post('/delete_individual_address',urlencodedParser,function(request,respo
     var UserId=request.body.UserId;
 
 
-    var myPromise = AddressController.delete_user_specic_record(column_name,value_,UserIdColumnName,UserId);
+    var myPromise = CashFlowTypesController.delete_user_specic_record(column_name,value_,UserIdColumnName,UserId);
 
 
     myPromise.then(function(result) {
@@ -225,7 +223,7 @@ router.post('/delete_individual_address',urlencodedParser,function(request,respo
 
 
 
-router.post('/get_number_of_address_records',urlencodedParser,function(request,response){
+router.post('/get_number_of_cash_flow_types_records',urlencodedParser,function(request,response){
 
     var column_name=request.body.column_name;
     //var mValue=parseInt(request.body.search_value, 10);
@@ -233,7 +231,7 @@ router.post('/get_number_of_address_records',urlencodedParser,function(request,r
 
 
 
-    var myPromise = AddressController.get_number_of_records(column_name,value_);
+    var myPromise = CashFlowTypesController.get_number_of_records(column_name,value_);
 
 
     myPromise.then(function(result) {
@@ -253,7 +251,7 @@ router.post('/get_number_of_address_records',urlencodedParser,function(request,r
 
 
 
-router.post('/address_user_specific_query',urlencodedParser,function(request,response){
+router.post('/cash_flow_types_user_specific_query',urlencodedParser,function(request,response){
 
     var ColumnName=request.body.ColumnName;
     //var mValue=parseInt(request.body.search_value, 10);
@@ -265,7 +263,7 @@ router.post('/address_user_specific_query',urlencodedParser,function(request,res
 
 
 
-    var myPromise = AddressController.user_specific_select_query(ColumnName,value_,UserIdColumnName,UserId);
+    var myPromise = CashFlowTypesController.user_specific_select_query(ColumnName,value_,UserIdColumnName,UserId);
 
 
     myPromise.then(function(result) {

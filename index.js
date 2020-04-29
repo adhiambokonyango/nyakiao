@@ -137,6 +137,12 @@ app.use(require("./routes/cousins/CousinsRoutes.js"));
 //contacts
 app.use(require("./routes/contacts/ContactsRoutes.js"));
 
+// funding
+app.use(require("./routes/funding/ActualDeductionsRoutes.js"));
+app.use(require("./routes/funding/ActualQuarterRoutes.js"));
+app.use(require("./routes/funding/CashFlowRoutes.js"));
+app.use(require("./routes/funding/CashFlowTypesRoutes.js"));
+
 /*SON/2019-1-04 11:50 - DEVELOPMENT : End Common Utilities*/
 
 
