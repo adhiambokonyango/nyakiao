@@ -119,6 +119,8 @@ app.use(require("./routes/children/ChildrenCousinsRoutes.js"));
 // siblings
 app.use(require("./routes/siblings/SiblingsRoutes.js"));
 
+// spouse
+app.use(require("./routes/spouse/SpouseRoutes.js"));
 
 /*SON/2019-1-04 11:50 - DEVELOPMENT : End Common Utilities*/
 
